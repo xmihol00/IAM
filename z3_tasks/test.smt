@@ -1,0 +1,11 @@
+(declare-const a Real)
+(declare-const b Real)
+(declare-const c Real)
+(assert (= a 30))
+(assert (= b 8))
+(assert (= c (/ a b)))
+(define-fun demorgan () Real
+    (* b (* c c))
+)
+(check-sat)
+(get-model)

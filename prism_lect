@@ -1,0 +1,23 @@
+dtmc
+
+const double p;
+
+module m
+
+	s : [0..2] init 0;
+
+	// [sync] state_pred -> p1 : (s'=2) + p2 : (update2) ... ;
+	[] s=0 -> 1-p : (s'=1) + p : (s'=2);
+	[] s=1 -> 1 : (s'=0);
+	[] s=2 -> 1 : (s'=2);
+endmodule
+
+formula start = s=0;
+formula error = s=1;
+formula delivered = s=2;
+
+rewards "power"
+	start : 5;
+	error : 3;
+	delivered : 1;
+endrewards

@@ -1,0 +1,12 @@
+P=? [F delivered]
+
+P>=1 [F delivered]
+
+P=? [F<=4 delivered]
+
+R{"power"}=? [I=2]
+
+R{"power"}=? [C<=2]
+
+R{"power"}=? [F delivered]
+

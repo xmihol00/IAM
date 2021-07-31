@@ -1,0 +1,25 @@
+#=========================================================================================================
+# File:        castle_ladies.py
+# Case:        VUT, FIT, IAM, DU2
+# Date:        16. 3. 2021
+# Author:      David Mihola
+# Contact:     xmihol00@stud.fit.vutbr.cz
+# Description: Solution of a riddle - one always lies other one always says true.
+#==========================================================================================================
+
+We have to ensure that there is always one lie. To accomplish that we need to ask the lady in such a way,
+that the answer contains answers from both of the ladies. The question could then sound like:
+
+What would the other lady say, if I asked her where the left road goes?
+
+Solution:
+1, Left road heads out, we meet the white lady:
+    answer: TO THE CASTLE PRISON
+2, Left road heads out, we meet the shady lady:
+    answer: TO THE CASTLE PRISON
+3, Left road does not head out, we meet the white lady:
+    answer: OUTSIDE
+4, Left road does not head out, we meet the shady lady:
+    answer: OUTSIDE
+
+So we will always take the road to the the castle prison and hope we asked the right question.
